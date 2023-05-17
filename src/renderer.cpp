@@ -6,6 +6,11 @@ Renderer::Renderer(std::size_t a, std::size_t b,
                     screen_width(a),screen_height(b),
                     grid_width(c),grid_height(d){
 
+if(SDL_Init(SDL_INIT_EVERYTHING) < 0){
+    std::cerr<<"Error\n";
+    std::cerr<<SDL_GetError();
+}
+
 window = SDL_CreateWindow("window",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
                           screen_width,screen_height,SDL_WINDOW_SHOWN);
 renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
@@ -20,7 +25,7 @@ void Renderer::Render(Snake &snake){
  block.x = block.w*snake.head_x;
  block.y = block.h*snake.head_y;
 
- SDL_Delay(100);
+
 
  std::cout<<"("<<snake.head_x<<","<<snake.head_y<<")"<<std::endl;
  SDL_SetRenderDrawColor(renderer,0x00,0x00,0x00,0x00);

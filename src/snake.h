@@ -16,7 +16,7 @@ class Snake{
     Direction direction = Direction::UP;
     float head_x;
     float head_y;
-    float speed{0.1};
+    float speed{0.2};
     int size{1};
     bool alive{true};
     bool growing {false};

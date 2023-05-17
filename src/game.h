@@ -4,7 +4,7 @@
 #include "renderer.h"
 #include "control.h"
 #include "snake.h"
-
+#include <iostream>
 
 
 class Game{
