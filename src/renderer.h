@@ -9,7 +9,7 @@ class Renderer{
 
     public:
     Renderer(std::size_t a, std::size_t b, std::size_t c, std::size_t d);
-    void Render(Snake &snake);
+    void Render(Snake &snake,SDL_Point&);
     private:
 
       SDL_Window *window;

@@ -17,7 +17,7 @@ renderer = SDL_CreateRenderer(window,-1,SDL_RENDERER_ACCELERATED);
 
                     }
 
-void Renderer::Render(Snake &snake){
+void Renderer::Render(Snake &snake,SDL_Point &food){
 
  SDL_Rect block;
  block.w = screen_width/grid_width;
@@ -29,9 +29,12 @@ void Renderer::Render(Snake &snake){
 
  std::cout<<"("<<snake.head_x<<","<<snake.head_y<<")"<<std::endl;
  SDL_SetRenderDrawColor(renderer,0x00,0x00,0x00,0x00);
- SDL_RenderClear(renderer);
+//  SDL_RenderClear(renderer);
   SDL_SetRenderDrawColor(renderer,0xde,0x2f,0xdd,0xdd);
-
+ SDL_RenderFillRect(renderer,&block);
+ block.x = block.w*food.x;
+ block.y = block.h*food.y;
+  SDL_SetRenderDrawColor(renderer,0xae,0xff,0xcd,0xdd);
  SDL_RenderFillRect(renderer,&block);
  SDL_RenderPresent(renderer);
 
