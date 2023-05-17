@@ -1,4 +1,4 @@
-# BoilerplateSnakeSDL
+# SDLSnake
 
 ## Game Loop
 
