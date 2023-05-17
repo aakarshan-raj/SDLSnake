@@ -7,9 +7,9 @@
 int main(){
 
 
-Renderer render{640,640,32,32};
+Renderer render{940,840,40,40};
 Control control;
-Game game{32,32};
+Game game{40,40};
 game.run(control,render);
 
 }
