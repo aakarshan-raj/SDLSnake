@@ -20,7 +20,8 @@ void Renderer::Render(Snake &snake){
  block.x = block.w*snake.head_x;
  block.y = block.h*snake.head_y;
 
- 
+ SDL_Delay(100);
+
  std::cout<<"("<<snake.head_x<<","<<snake.head_y<<")"<<std::endl;
  SDL_SetRenderDrawColor(renderer,0x00,0x00,0x00,0x00);
  SDL_RenderClear(renderer);
